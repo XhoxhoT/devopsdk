@@ -24,4 +24,4 @@ spec:
       targetPort: 9090
   type: NodePort
   
-# kubectl apply -f app-service.yaml 
+# kubectl apply -f service_prometheus.yaml 
