@@ -1,5 +1,5 @@
 package RandomNumberGenerator;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
@@ -7,6 +7,7 @@ import java.util.Random;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
+@Slf4j
 public class Controller {
 
 	@RequestMapping("/")
@@ -15,6 +16,8 @@ public class Controller {
 //		return "<!doctypehtml><html><head><title>RandomNumber</title></head><body style=\"background:black\"><h1 style="
 //				+ style + ">" + new Random().nextInt(1000001) + "</h1></body></html>";
 
-		return new Random().nextInt(1000001);
-	}
+int randomNumber =  new Random().nextInt(1000001);
+log.info("Generated random number: {}", randomNumber);
+return  randomNumber;
+}
 }
